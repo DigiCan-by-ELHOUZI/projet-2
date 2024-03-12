@@ -1,0 +1,551 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f4fa;
+    font-family: "Nunito", sans-serif;
+}
+
+main {
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.stepper {
+    width: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 12%;
+}
+
+.step--1,
+.step--2,
+.step--3,
+.step--4 {
+    width: 10rem;
+    padding: 1.5rem 0;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.step--1,
+.step--2,
+.step--3 {
+    border-right: 1px solid rgb(0, 0, 0);
+}
+
+.form {
+    background: rgb(0, 0, 0);
+    text-align: center;
+    position: absolute;
+    width: 60rem;
+    box-shadow: 1.2rem 2.2rem 8.5rem #000000;
+    display: none;
+    border-radius: 4rem;
+    overflow: hidden;
+}
+
+.form--header-container {
+    background: linear-gradient(to right, rgb(0, 0, 0), #03114e);
+    color: rgb(255, 255, 255);
+    height: 9rem;
+    padding: 1rem 0;
+    margin-bottom: 4rem;
+    
+}
+
+.form--header-title {
+    font-size: 2.4rem;
+}
+
+input[type="text"] {
+    padding: 1.8rem;
+    margin: auto;
+    margin-top: 0.7rem;
+    width: 40rem;
+    display: block;
+    border-radius: 1.5rem;
+    outline: none;
+    border: 1px solid #03114e;
+}
+
+.form__btn {
+    background: #03114e;
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+    padding: 1.5rem 0.7rem;
+    width: 12rem;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form--message-text {
+    width: 60rem;
+    background: rgb(0, 0, 0);
+    color: rgb(182, 8, 8);
+    padding: 6rem 8rem;
+    text-align: center;
+    font-size: 1.4rem;
+    box-shadow: 1.2rem 2.2rem 2.5rem rgb(22, 42, 160);
+    animation: fadeIn 0.8s;
+    border-radius: 7rem;
+    font-size: 30px;
+}
+
+.form-active {
+    z-index: 1000;
+    display: block;
+}
+
+.form-active-animate {
+    animation: moveRight 1s;
+}
+
+.form-inactive {
+    display: block;
+    animation: moveLeft 1s;
+}
+
+.step-active {
+    background: rgb(134, 133, 133);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(-27rem) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0rem) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0rem) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(27rem) scale(0.9);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*-----------------------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+/* line 23, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
+
+p {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #10285d;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+
+/* Sticky*/
+
+
+/* line 431, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
+
+.sticky-bar {
+    left: 0;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    z-index: 9999;
+    -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    background: #fff;
+}
+
+
+/* rotateme */
+
+
+/* line 545, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
+
+.rotateme {
+    -webkit-animation-name: rotateme;
+    animation-name: rotateme;
+    -webkit-animation-duration: 30s;
+    animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+
+/* 20. preloader */
+
+
+/* line 577, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
+
+.preloader {
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999;
+    -webkit-transition: .6s;
+    -o-transition: .6s;
+    transition: .6s;
+    margin: 0 auto;
+}
+
+
+/* line 593, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
+
+.preloader .preloader-circle {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-top-color: #ff0000;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    z-index: 10;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 1px 5px 0 rgb(0, 168, 173);
+    box-shadow: 0 1px 5px 0 rgb(4, 7, 231);
+    background-color: rgb(0, 0, 0);
+    -webkit-animation: zoom 2000ms infinite ease;
+    animation: zoom 2000ms infinite ease;
+    -webkit-transition: .6s;
+    -o-transition: .6s;
+    transition: .6s;
+}
+
+
+/* line 615, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
+
+.preloader .preloader-circle2 {
+    border-top-color: #000000;
+}
+
+
+/* line 618, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
+
+.preloader .preloader-img {
+    position: absolute;
+    top: 50%;
+    z-index: 200;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding-top: 6px;
+    -webkit-transition: .6s;
+    -o-transition: .6s;
+    transition: .6s;
+}
+
+
+/* line 636, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
+
+.preloader .preloader-img img {
+    max-width: 55px;
+}
+
+@keyframes zoom {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .6s;
+        -o-transition: .6s;
+        transition: .6s;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transition: .6s;
+        -o-transition: .6s;
+        transition: .6s;
+    }
+}
+
+
+/*-- Section Padding -- */
+
+
+/* line 842, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_common.scss */
+
+.footer-padding {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+
+/* line 63, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_color.scss */
+
+.black-bg {
+    background: #000;
+}
+
+
+/* line 66, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_color.scss */
+
+.theme-bg {
+    background: #FF0000;
+}
+
+
+/* line 69, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_color.scss */
+
+.brand-bg {
+    background: #f1f4fa;
+}
+
+
+/* line 72, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_color.scss */
+
+.testimonial-bg {
+    background: #f9fafc;
+}
+
+
+/*--- color------*/
+
+
+/* line 78, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_color.scss */
+
+.white-color {
+    color: #ffffff;
+}
+
+
+/* line 81, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_color.scss */
+
+.black-color {
+    color: #000;
+}
+
+
+/* line 84, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_color.scss */
+
+.theme-color {
+    color: #FF0000;
+}
+
+
+/* line 58, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_headerMenu.scss */
+
+.header-area .menu-wrapper .main-menu ul li {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* line 62, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_headerMenu.scss */
+
+.header-area .menu-wrapper .main-menu ul li a {
+    color: #fff;
+    font-weight: 500;
+    padding: 39px 21px;
+    display: block;
+    font-size: 18px;
+    font-family: "Oswald", sans-serif;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    text-transform: uppercase;
+    text-decoration: underline transparent;
+}
+
+
+/* line 78, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_headerMenu.scss */
+
+.header-area .menu-wrapper .main-menu ul li:hover>a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+/* line 1, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_services_section.scss */
+
+.services-area {
+    background: #111111;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+/* line 12, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_services_section.scss */
+
+.services-area .single-services {
+    display: flex;
+}
+
+
+/* line 29, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_services_section.scss */
+
+.services-area .single-services .features-caption h3 {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+/* line 36, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_services_section.scss */
+
+.services-area .single-services .features-caption p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+
+/* line 5, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_footer.scss */
+
+.footer-area .footer-top .single-footer-caption .footer-logo {
+    margin-bottom: 30px;
+}
+
+
+/* line 13, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_footer.scss */
+
+.footer-area .footer-bottom {
+    border-top: 1px solid #1f2024;
+    padding-bottom: 50px;
+    padding-top: 40px;
+}
+
+
+/* line 18, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_footer.scss */
+
+.footer-area .footer-bottom .footer-copy-right p {
+    color: #c4c4c4;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 12px;
+}
+
+
+/* line 24, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_footer.scss */
+
+.footer-area .footer-bottom .footer-copy-right p i {
+    color: #FF0000;
+}
+
+
+/* line 27, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_footer.scss */
+
+.footer-area .footer-bottom .footer-copy-right p a {
+    color: #FF0000;
+}
+
+
+/* line 29, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_footer.scss */
+
+.footer-area .footer-bottom .footer-copy-right p a:hover {
+    color: #fff;
+}
+
+
+/* line 41, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_footer.scss */
+
+.footer-area .footer-social a {
+    background: rgba(255, 0, 0, 0.1);
+    color: #FF0000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 8px;
+}
+
+
+/* line 53, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_footer.scss */
+
+.footer-area .footer-social a:hover {
+    color: #fff;
+    background: #FF0000;
+}
+
+
+/* line 47, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_extend.scss */
+
+.header-area .menu-wrapper .main-menu ul ul.submenu,
+.header-sticky.sticky-bar {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#950101+0,630102+50,3d0302+100 */
+    background: #1b1e50;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #1b1e50 0%, #1b1e50 50%, #1b1e50 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #1b1e50 0%, #1b1e50 50%, #1b1e50 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #1b1e50 0%, #1b1e50 50%, #1b1e50 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#950101', endColorstr='#3d0302', GradientType=0);
+    /* IE6-9 */
+}
+
+
+/*----calculateur------*/
+
+.alt {
+    width: 500px;
+}
+
+
+
+
+/*------------------pagecnx-----------------------------------------------------------*/
+
